@@ -1,6 +1,7 @@
 <!doctype html>
 <html class="no-js">
 <head>
+    <title>DopeChic</title>
     <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -55,11 +56,50 @@
             transform: scale(1.1);
         }
     </style>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="jquery/countdown.js"></script>
+    <script>
+	$(document).ready(function() {
+	
+		$("#countdown").countdown({
+			date: "24 november 2016 5:16:30", // "3 december 2012 12:00:00"
+			format: "on" // on (03:07:52) | off (3:7:52) 
+		},
+		
+		function() { 
+			
+			// the code here will run when the countdown ends
+			alert("we're-almost-done-here!") 
+
+		});
+	});
+</script>
 </head>
 <body>
 
 <div class="hero-unit">
     <h1>Coming Soon</h1>
+</div>
+<div class="timer-area">
+<ul id="countdown">
+	<li>
+		<span class="days">00</span>
+		<p class="timeRefDays">days</p>
+	</li>
+	<li>
+		<span class="hours">00</span>
+		<p class="timeRefHours">hours</p>
+	</li>
+	<li>
+		<span class="minutes">00</span>
+		<p class="timeRefMinutes">minutes</p>
+	</li>
+	<li>
+		<span class="seconds">00</span>
+		<p class="timeRefSeconds">seconds</p>
+	</li>
+</ul>
+
 </div>
 <div class="social">
     <a href="https://www.facebook.com/sheidyg" target="_blank"><img src="images/facebook-logo.jpg" alt="fb link"></a>
